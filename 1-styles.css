@@ -236,15 +236,24 @@ main .container {
     flex-wrap: wrap;
 }
 
-.wwdh1 {
+.wwd-h1 {
+    color: var(--black);
     width: 100%;
     text-align: center;
     font-family: ssp;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 600;
     margin: auto;
 }
 
+main p {
+    width: 65%;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-family: ssp;
+    margin: 2rem auto;
+}
 main .ic {
     width: 100%;
     display: grid;
@@ -289,6 +298,11 @@ main .ic .icon p {
 @media (max-width: 480px) {
     main .container {
         padding: 4rem 2.5rem;
+    }
+
+    main .ic {
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
     }
 
     main .ic .icon p {
