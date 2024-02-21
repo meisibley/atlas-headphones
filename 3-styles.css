@@ -314,7 +314,7 @@ main .case .term p {
     }
 }
 
-/* our results */
+/* Our results */
 
 #or {
     color: #FFF;
@@ -358,5 +358,84 @@ main .case .term p {
 @media (max-width: 480px) {
     #or {
         background-position: 50%;
+    }
+}
+
+/* Contact us */
+
+#contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2rem;
+}
+
+input {
+    width: 50%;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgba(7, 22, 41, 0.17);
+    border-right: none;
+    height: 2rem;
+    color: var(--black);
+    font-family: ssp;
+    font-size: 14px;
+    margin: 1rem 0;
+}
+
+input::placeholder {
+    color: var(--black);
+    font-family: ssp;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#contact button {
+    box-shadow: none;
+    margin: 1.5rem auto;
+}
+
+.input_label {
+    position: relative;
+}
+
+input:focus + .input_label {
+    outline: none;
+}
+
+.input_label::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--red);
+    outline: none;
+    bottom: 1.1rem;
+    transition: width 0.2s ease;
+}
+
+input:focus + .input_label::after {
+    content: "";
+    width: 100%;
+    display: block;
+    background-color: var(--red);
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    input {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        width: 95%;
     }
 }
