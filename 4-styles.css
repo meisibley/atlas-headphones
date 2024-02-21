@@ -1,0 +1,507 @@
+:root {
+--red: #FF6565;
+--black: #071629;
+}
+
+@font-face {
+    font-family: ssp;
+    src: url(./source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--red);
+}
+
+/* header */
+
+header {
+    width: 100%;
+    position: relative;
+    color: #FFF;
+    background-image: url("images/headphones_hero_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header .container {
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    position: relative;
+}
+
+.logo {
+    width: 10rem;
+    height: auto;
+}
+
+#hamburger {
+    display: none;
+    position: absolute;
+}
+
+#burger {
+    display: none;
+    position: absolute;
+}
+
+.menu {
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: ssp;
+    padding: 0;
+    margin: auto 0;
+}
+
+.menu li {
+    margin: auto 1.25rem;
+}
+
+.text {
+    width: 75%;
+    text-align: center;
+    font-family: ssp;
+    margin: 10.5rem auto 0 auto;
+}
+
+.text h1 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.text h1::after {
+    content: "Lorem ipsum dolor set amet lorem ipsum";
+    display: block;
+    font-size: 16px;
+    position: relative;
+    margin: 0.25rem 0;
+}
+
+.text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+}
+
+button {
+    color: #FFF;
+    background-color: var(--red);
+    border-radius: 25px;
+    font-family: ssp;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 1rem auto;
+    cursor: pointer;
+    opacity: 1;
+    padding: 1rem 2rem;
+    border: none;
+    box-shadow: 0rem 0.125rem 1.25rem 0rem rgba(0, 0, 0, 0.50);
+}
+
+button:hover, button:active {
+    opacity: 0.9;
+}
+
+@media (max-width: 1200px) {
+    header {background-position: 42% 50%;}
+}
+
+@media (max-width: 480px) {
+    header {background-position: 44% 50%;}
+
+    header .container nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        margin: 1rem auto;
+    }
+
+    .menu li {
+        width: 100%;
+        margin: 0.5rem auto;
+    }
+
+    #burger {
+        background: #FFF;
+        width: 0.8rem;
+        height: 0.125rem;
+        position: absolute;
+        left: 1rem;
+        top: 1.125rem;
+        display: block;
+    }
+
+    #burger::before {
+        content: "";
+        background: #FFF;
+        width: 1.25rem;
+        height: 0.125rem;
+        position: relative;
+        top: -0.4rem;
+        display: block;
+    }
+
+    #burger::after {
+        content: "";
+        background: #FFF;
+        width: 1.125rem;
+        height: 0.125rem;
+        position: relative;
+        top: 0.3rem;
+        display: block;
+    }
+
+    #hamburger:checked ~ .menu {
+        display: inline-flex;
+    }
+
+    #hamburger:checked ~ #burger {
+        background: transparent;
+    }
+
+    #hamburger:checked ~ #burger::before {
+        transform: rotate(45deg);
+        top: 0.2rem;
+        margin: auto;
+    }
+
+    #hamburger:checked ~ #burger::after {
+        width: 1.25rem;
+        transform: rotate(-45deg);
+        top: 0.06rem;
+        margin: auto;
+    }
+
+    .text {
+        width: 100%;
+        margin: 14rem auto 0 auto;
+    }
+}
+
+/* main */
+
+main {
+    width: 100%;
+    background: transparent;
+    position: relative;
+}
+
+main .container {
+    padding: 4rem;
+    flex-wrap: wrap;
+}
+
+.container-h1 {
+    width: 100%;
+    text-align: center;
+    font-family: ssp;
+    font-size: 32px;
+    font-weight: 600;
+    margin: auto;
+}
+
+main p {
+    width: 65%;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-family: ssp;
+    margin: 2rem auto;
+}
+main .case {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    text-align: center;
+    align-items: end;
+    font-family: ssp;
+    margin: 2rem 0;
+}
+
+main .case .term {
+    margin: 0.5rem;
+}
+
+main .case .term h2 {
+    font-family: ssp;
+    font-size: 18px;
+}
+
+main .case .term p {
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    main .case {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    main .case .term {
+        margin: 1rem;
+    }
+
+    main p {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    main .container {
+        padding: 4rem 2.5rem;
+    }
+
+    main .case {
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    main .case .term p {
+        width: 70%;
+        margin: auto;
+    }
+
+    main p {
+        width: 100%;
+    }
+}
+
+/* Our results */
+
+#or {
+    color: #FFF;
+    width: 100%;
+    background-image: url("images/headphones_hero_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#or .container {
+    padding: 6rem 4rem;
+}
+
+#or .case .term {
+    height: 10rem;
+    position: relative;
+    background-image: url("images/pentagone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 0;
+}
+
+#or .case .term h2 {
+    font-size: 46px;
+    position: relative;
+    top: 4%;
+}
+
+#or .case .term p {
+    position: relative;
+    top: -15%;
+}
+
+@media (max-width: 1200px) {
+    #or {
+        background-position: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    #or {
+        background-position: 50%;
+    }
+}
+
+/* Contact us */
+
+#contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2rem;
+}
+
+input {
+    width: 50%;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgba(7, 22, 41, 0.17);
+    border-right: none;
+    height: 2rem;
+    color: var(--black);
+    font-family: ssp;
+    font-size: 14px;
+    margin: 1rem 0;
+}
+
+input::placeholder {
+    color: var(--black);
+    font-family: ssp;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#contact button {
+    box-shadow: none;
+    margin: 1.5rem auto;
+}
+
+.input-label {
+    position: relative;
+}
+
+input:focus + .input-label {
+    outline: none;
+}
+
+.input-label::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--red);
+    outline: none;
+    bottom: 1.1rem;
+    transition: width 0.2s ease;
+}
+
+input:focus + .input-label::after {
+    content: "";
+    width: 100%;
+    display: block;
+    background-color: var(--red);
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    input {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        width: 95%;
+    }
+}
+
+/* footer */
+
+footer {
+    color: #FFF;
+    background-color: var(--black);
+}
+
+footer .container {
+    flex-wrap: wrap;
+    padding: 4rem 4rem 3rem 4rem;
+}
+
+footer nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-icons {
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: ssp;
+    padding: 0;
+    margin: auto 0;
+}
+
+.footer-icons li {
+    margin: 0 0.5rem;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: ssp;
+    opacity: 0.35;
+    margin: 3rem auto 0;
+}
+
+@media (max-width: 480px) {
+    footer .container {
+        padding: 3rem 4rem;
+    }
+
+    footer nav {
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .logo {
+        max-width: 50%;
+    }
+
+    .footer-icons {
+        margin: 3rem auto;
+    }
+
+    footer p {
+        margin: 0 auto;
+    }
+}
