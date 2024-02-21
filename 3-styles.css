@@ -400,15 +400,15 @@ input:focus {
     margin: 1.5rem auto;
 }
 
-.input_label {
+.input-label {
     position: relative;
 }
 
-input:focus + .input_label {
+input:focus + .input-label {
     outline: none;
 }
 
-.input_label::after {
+.input-label::after {
     content: "";
     display: block;
     position: relative;
@@ -420,7 +420,7 @@ input:focus + .input_label {
     transition: width 0.2s ease;
 }
 
-input:focus + .input_label::after {
+input:focus + .input-label::after {
     content: "";
     width: 100%;
     display: block;
